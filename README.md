@@ -60,3 +60,91 @@ Las contantes son valores que definimos y se mantienen invariables durante todo 
 	echo DICEHOLA; # Dirá "Hola mundo"
 ?>
 ```
+
+### Arrays
+Son variables que permiten alamacenar más de un valor al mismo tiempo, se declaran como ```$nombreVariable = array();```. Existen tres tipos de arrays, indexados, asociativos y multidimensionales.  
+Los **indexados** son aquellos que se almacenan con un número que funciona como índice.  
+
+```php
+<?php
+$coches = array("Citroen", "BMW", "Ferrari");
+echo "Tengo un triste " . $coches[0] . " Saxo de tres puertas, y me gustaría tener un " . $coches[2];
+?>
+```
+ 
+Los arrays **asociativos** relacionan el índice con el valor, donde el índice no es un valor númerico como en el anterior caso.  
+```php
+<?php
+$edad = array("Alex" => "19", "Jose" => "31", "Juan" => "13");
+echo "El usuario Alex tiene actualmente " . $edad["Alex"];
+?>
+```
+
+
+Un array **multidimensional** es un array que contiene arrays en su interior, ya sean indexados o asociativos.  
+```php
+<?php
+
+// Array con dos dimensiones:
+$familias = array(	
+		"Vázquez"=>array("Carmen","Pilar","Juan"),
+  		"García"=>array("Manuel"),
+  		"López"=>array ("Nuria", "Patricia", "Alberto")
+  	    ); 
+
+echo "Es " . $familias['Vázquez'][2] . " parte de la familia Vázquez?";
+
+// Resultado: Es Juan parte da familia Vázquez?
+
+?>
+
+```
+
+Existe la función **count()**, que sirve para contar los elementos de un array, en los arrays multidimensionales se puede especificar en que array de los interiores queremos contar los elementos.  
+
+
+### Condicionales
+Los condicionales son para ejecutar ciertas partes del código si se cumple cierta condición. La sintaxis un condicional es ```if(condicion) {código}```, pero también se pueden anidar varios condicionales en la misma estructura.  
+```php
+<?php
+
+$x = 10;
+
+if($x < 9) {
+	echo "El número que pusiste es menor a 9";
+} else if($x == 9) {
+	echo "El número es identico a 9";
+} else {
+	echo "El número que pusiste es superior a 9";
+}
+
+// El resultado será el último echo
+?>
+```
+
+Los **switch** son sentencias en las que se pueden uno o varios bloques, donde más que un rango de condiciones como en el ejemplo de los *if* son condiciones más específicas.  
+
+```php
+<?php
+$x = 3;
+
+switch($x) {
+	case 1:
+		echo "Usted pulsó el numero uno";
+	break;
+	case 2:
+		echo "Usted pulsó el número dos y entonces se acabará el programa";
+	exit(); // Si $x vale 2 se terminará el programa en este paso
+	case 3:
+		echo "Usted pulsó el número tres";
+	break;
+	default:
+		echo "No pulso una tecla válida";
+	break;
+}
+?>
+```
+
+### Bucles
+Los bucles son estructuras repetitivas que ejecutan ciertas partes del código un número determinado de veces, existen cuatro tipos de bucles **while**, **do-while**, **for** y **foreach**.  
+
