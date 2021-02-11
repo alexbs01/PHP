@@ -122,7 +122,7 @@ if($x < 9) {
 ?>
 ```
 
-Los **switch** son sentencias en las que se pueden uno o varios bloques, donde más que un rango de condiciones como en el ejemplo de los *if* son condiciones más específicas.  
+Los **switch** son sentencias en las que se pueden uno o varios bloques (case), donde más que un rango de condiciones como en el ejemplo de los *if* son condiciones más específicas. Para parar un **case** hay que indicarlo con ```break;``` porque si no seguirá ejecutando los *case* que tenga por debajo en su línea de ejecución haste encontrarse con un *break;* o finalizar el programa.  
 
 ```php
 <?php
@@ -147,4 +147,90 @@ switch($x) {
 
 ### Bucles
 Los bucles son estructuras repetitivas que ejecutan ciertas partes del código un número determinado de veces, existen cuatro tipos de bucles **while**, **do-while**, **for** y **foreach**.  
+
+- **While**: ```while (<condicion>) {<codigo>}```  
+Repite la condición mientras sea verdadera, no tiene porqué ejecutarse siempre.  
+
+```php
+<?php
+	$x = 0;
+	while($x <= 10) {
+		echo $x . "<br/>";
+	}	// Pone los números del 0 al 10, uno por cada línea.
+?>
+```
+
+-----
+
+- **Do-while**: ```do {<codigo>} while (<condicion>);```  
+Repite la condición mientras sea verdadera, pero se ejecuta como mínimo una vez siempre.  
+
+```php
+<?php
+	$x = 0;
+
+	do {
+		echo "$x, ";
+	}
+while($x <= 10); // Pone los números del 0 al 10 en la misma línea.
+?>
+```
+
+-----
+
+- **For**: ```for(<inicio>; <condicion>; <salto>) {<codigo>}```  
+Ejecuta el codigo mientras el la condición se cumple partiendo desde el valor inicial y dando saltos o pasos de X cantidad hasta cumplir dejar de cumplir la condición.  
+
+```php
+<?php
+	for($i = 0; $i <= 10; $i++) {
+		echo "$i, ";
+	} // Imprime los números del 0 al 10 separados por comas.
+?>
+```
+
+-----
+
+- **Foreach**: Para arrays indexados ```foreach(<array> as <variable>) {<codigo>}```  
+Para arrays asociativos ```foreach(<array> as <clave> => <variable>) {<codigo>}```  
+
+```php
+<?php
+	$x = array(1, 2, 3, 4, 5, 6, 7, 8, 9);
+	$nombreApellido = array("Alex" => "Becerra", "Tania" => "Teijeiro", "Juan" => "García");
+	
+	foreach($x as $numero) {
+		echo "$numero, ";
+	}
+	echo <br/>;
+	foreach($nombreApellido as $nombre => $apellido) {
+		echo "El alumno se llama $nombre $apellido";
+	}
+?>
+```
+
+### Funciones definidas por el usuario
+Las funciones definidas por el usuario son fragmentos de código que se pueden crear una vez para utilizarlos las veces que haga falta a lo largo del programa. Su sintaxis es:  
+
+```php
+<?php
+	function <nombreFuncion>([variablesSiTiene]) {
+		<codigo>
+	}
+?>
+```
+
+Y se pueden utilizar de la siguiente manera:  
+```php
+<?php
+	function suma($x, $y) {
+		return $x + $y;
+	}
+	
+	$num1 = 10;
+	$num2 = 15;
+	
+	echo "La suma de $num1 y $num2 es " . suma($num1, $num2);
+	// Imprime el echo concatenando la sume hecha por la funcion suma()
+?>
 
