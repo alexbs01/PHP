@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+	<usuario ID=1>
+		<login>admin</login>
+		<contrasinal>81dc9bdb52d04dc20036dbd8313ed055</contrasinal>
+		<rol>administrador</rol>
+		<nome>Fabio</nome>
+		<apelidos>Farrapeira Ulloa</apelidos>
+		<idade>20</idade>
+		<localidade>Neda</localidade>
+	<usuario>
+	<usuario ID=2>
+		<login>usr01</login>
+		<contrasinal>d8578edf8458ce06fbc5bb76a58c5ca4</contrasinal>
+		<rol>rexistrado</rol>
+		<nome>Tania</nome>
+		<apelidos>Fieguerial Ulloa</apelidos>
+		<idade>23</idade>
+		<localidade>Ferrol</localidade>
+	<usuario>
+</usuarios>

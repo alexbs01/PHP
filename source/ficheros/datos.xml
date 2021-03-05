@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<usuarios>
+	<usuario ID=0>
+		<login>usr01</login>
+		<password>1111</password>
+		<email>usr01@exemplo.es</email>
+	<usuario>
+	<usuario ID=1>
+		<login>usr02</login>
+		<password>2222</password>
+		<email>usr02@exemplo.es</email>
+	<usuario>
+	<usuario ID=2>
+		<login>usr03</login>
+		<password>3333</password>
+		<email>usr03@exemplo.es</email>
+	<usuario>
+</usuarios>
